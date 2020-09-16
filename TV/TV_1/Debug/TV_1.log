@@ -1,0 +1,7 @@
+﻿  Dice.cpp
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_1\Dice.cpp(14,36): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_1\Dice.cpp(37,39): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  TV_1.cpp
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_1\TV_1.cpp(7,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+  TV_1.vcxproj -> C:\Users\Admin\Documents\GitHub\TV\TV\Debug\TV_1.exe
