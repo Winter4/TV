@@ -1,25 +1,25 @@
 #include "Dice.h"
 using namespace std;
 
-Dice::Dice()
+Dice::Dice(int facesAmountToSet)
 {
-	facesAmount = 4;
+	facesAmount = facesAmountToSet;
 	facesProbs = new float[facesAmount];
 
 	float tmp = 0; // сумма n - 1 вероятностей
 	for (int i = 0; i < facesAmount - 1; i++) {
-		facesProbs[i] = 1.0 / 4;
+		facesProbs[i] = 1.0 / facesAmount;
 		tmp += facesProbs[i];
 	}
 	facesProbs[facesAmount - 1] = 1.0 - tmp;
 }
 
-Dice::Dice(int facesAmountToSet, float* faceProbsToSet)
+Dice::Dice(int facesAmountToSet, float* facesProbsToSet)
 {
 	facesAmount = facesAmountToSet;
 
 	for (int i = 0; i < facesAmount; i++)
-		facesProbs[i] = faceProbsToSet[i];
+		facesProbs[i] = facesProbsToSet[i];
 }
 
 Dice::~Dice()
@@ -28,7 +28,7 @@ Dice::~Dice()
 	delete[] facesProcs;
 }
 
-void Dice::SetProb(int faceNum, float probToSet)
+void Dice::SetProb(int faceNum, float probToSet) // xyi
 {
 	if (faceNum <= facesAmount) {
 		facesProbs[faceNum - 1] = probToSet;
