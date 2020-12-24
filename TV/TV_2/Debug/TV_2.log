@@ -1,0 +1,5 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (TV_1.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  TV_2.cpp
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_2\TV_2.cpp(13,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_2\TV_2.cpp(18,25): warning C4305: аргумент: усечение из "double" в "float"
+  TV_2.vcxproj -> C:\Users\Admin\Documents\GitHub\TV\TV\Debug\TV_2.exe

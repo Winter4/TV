@@ -1,4 +1,5 @@
 ﻿  Dice.cpp
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_1\Dice.cpp(11,23): warning C4244: =: преобразование "double" в "float", возможна потеря данных
 C:\Users\Admin\Documents\GitHub\TV\TV\TV_1\Dice.cpp(14,36): warning C4244: =: преобразование "double" в "float", возможна потеря данных
 C:\Users\Admin\Documents\GitHub\TV\TV\TV_1\Dice.cpp(37,39): warning C4244: =: преобразование "double" в "float", возможна потеря данных
   TV_1.cpp
