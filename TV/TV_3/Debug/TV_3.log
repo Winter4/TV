@@ -1,9 +1,7 @@
 ﻿  TV_3.cpp
-C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(29,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
-C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(46,30): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(52,25): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(73,26): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(90,25): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(91,42): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(95,1): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(30,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(46,13): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(72,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(89,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_3\TV_3.cpp(94,1): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
   TV_3.vcxproj -> C:\Users\Admin\Documents\GitHub\TV\TV\Debug\TV_3.exe

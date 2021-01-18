@@ -19,21 +19,22 @@ public:
 	Generator() 
 	{
 		// начальное и конечное значение икса
-		int x_start = -3,
-			 x_end = 3;
-		difference = (float)(x_end - x_start) / 100; // шаг икса; 50 - кол-во интервалов
+		int x_start = -1,
+			 x_end = 1;
+		int inervalsNum = 100; // количество интервалов
+		difference = (float)(x_end - x_start) / inervalsNum; // шаг икса
 		
 		float sum1 = 0, sum2 = 0;
 
 		// заполняем значения иксов
-		for (float x = x_start; x <= x_end + difference; x += difference) {
+		for (float x = x_start; x < x_end + difference; x += difference) {
 			x_values.push_back(x);
 			sum1 += Function(x);
 		}
 		
 		// заполняем значния интервалов
 		for (int i = 0; i < 100; i++) {
-			sum2 += Function(x_values[i]);
+			sum2 += Function(x_values[i]) / sum1;
 			intervals.push_back(sum2);
 
 			joinIntervals.push_back(0);
@@ -42,25 +43,23 @@ public:
 	}
 
 	float Function(float x) { // функция плотности распределения
-		//return exp(-(x * x) / (2 * 0.25) / (sqrt(2 * 3.14) * 0.5));
-		return exp(-((x * x) / 2)) / sqrt(2 * 3.14);
+		return exp(-(x * x) / (2 * 0.25) / (sqrt(2 * 3.14) * 0.5));
 	}
 
 	void PrintIntervals()
 	{
 		std::cout << "Intervals: " << std::endl;
-		for (int i : intervals)
-			std::cout << intervals[i] << std::endl;
+		for (float i : intervals)
+			std::cout << i << std::endl;
 		std::cout << std::endl;
 	}
 
 	void MyTask()
 	{
-		std::cout << "  Enter the sample size: ";
 		// ввод выборки
 		do {
+			std::cout << "  Enter the sample size (int number >100): ";
 			if (!(std::cin >> sampleSize)) {
-				std::cout << "Please enter correct number (>100): " << std::endl;
 				std::cin.clear();
 				std::cin.ignore(10000, '\n');
 			}
@@ -70,7 +69,7 @@ public:
 		for (int i = 0; i < sampleSize; i++) {
 			float random = (float)rand() / RAND_MAX;
 			
-			for (int j : intervals) {
+			for (int j = 0; j < intervals.size(); j++) {
 				if (intervals[j] > random) {
 					++joinIntervals[j];
 					break;
@@ -78,7 +77,7 @@ public:
 			}
 		}
 		
-		std::cout << "X\tJoin\tMath Exp.\tDispersion\tAvg. Sqr." << std::endl;
+		std::cout << "   X\tJoin\t  M.Exp.\tDispersion\tAvg. Sqr." << std::endl;
 
 		float 
 			empiricProbability = 0,
@@ -87,15 +86,17 @@ public:
 			dispersion = 0,
 			kolmogorova = 0;
 
-		for (int i : intervals) {
-			empiricProbability = joinIntervals[i] / sampleSize;
+		for (int i = 0; i < intervals.size(); i++) {
+			empiricProbability = joinIntervals[i] / (float)sampleSize;
 			mathExpectation += x_values[i] * empiricProbability;
 			mathExpectationSquare += (x_values[i] * x_values[i]) * empiricProbability;
 			dispersion += mathExpectationSquare - mathExpectation * mathExpectation;
 			kolmogorova += fabs(empiricProbability - intervals[i]) / sqrt(sampleSize);
 
-			std::cout << x_values[i] << "\t" << joinIntervals[i] << "\t" << mathExpectation << "\t\t" << dispersion << "\t\t" << sqrt(dispersion) << std::endl;
+			//std::cout << x_values[i] << "\t" << joinIntervals[i] << "\t" << mathExpectation << "\t\t" << dispersion << "\t\t" << sqrt(dispersion) << std::endl;
+			printf("%-9.2f %-7d %-16.3f %-13.3f %-9.3f \n", x_values[i], joinIntervals[i], mathExpectation, dispersion, sqrt(dispersion));
 		}
+		printf("\n Kolmogorova state: %.3f", kolmogorova);
 	}
 };
 
@@ -105,9 +106,9 @@ int main()
 	Generator lab3;
 	
 	lab3.PrintIntervals();
-	
 	lab3.MyTask();
 	
+	std::cout << std::endl;
 	system("pause");
 	return 0;
 }
