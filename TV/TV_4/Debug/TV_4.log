@@ -1,0 +1,12 @@
+﻿  TV_4.cpp
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_4\TV_4.cpp(43,4): warning C4305: инициализация: усечение из "double" в "_Ty"
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_4\TV_4.cpp(65,36): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_4\TV_4.cpp(65,20): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_4\TV_4.cpp(71,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_4\TV_4.cpp(87,13): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Documents\GitHub\TV\TV\TV_4\TV_4.cpp(134,1): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+  TV_4.vcxproj -> C:\Users\Admin\Documents\GitHub\TV\TV\Debug\TV_4.exe
